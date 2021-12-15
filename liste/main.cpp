@@ -1,45 +1,40 @@
-/*caricamento e stampa di una lista tramite puntatori*/
+using namespace std;
 
 #include <iostream>
 
-using namespace std;
+int main(){
+    char risposta;
 
-int main() {
-    int n;
-
-    struct Rubrica{
+    struct elemento{
         int numero;
-        string nome;
-        struct Rubrica *prossimo;
+        struct elemento *prossimo;
     };
 
-    typedef struct Rubrica informazioni;
+    typedef struct elemento Lista;
 
-    informazioni *puntatore = new informazioni;
+    Lista *punt = new Lista;
+    Lista *app = punt;
 
-    {
-        informazioni *p = puntatore;
+    do{
+        cout << "Inserisci il valore: ";
+        cin >> punt -> numero;
+        punt -> prossimo = new Lista;
+        punt = punt -> prossimo;
 
-        cout << "Inserire un valore: ";
-        cin >> n;
+        do{
+            cout << "Vuoi inserire un altro valore?\nInserisci la risposta (s/n): ";
+            cin >> risposta;
 
-        for (int i = 0; i < n; i++) {
-            cout << "Inserisci il numero: ";
-            cin >> p->numero;
-            cout << "Inserisci il nome: ";
-            cin >> p->nome;
-            p->prossimo = new informazioni;
-            p = p->prossimo;
-        }
+            if (risposta != 's' && risposta != 'n')
+                cout << "Errore, inserimento non valido. Reinserisci.\n";
+        } while (risposta != 's' && risposta != 'n');
+    } while (risposta == 's');
 
-        p->prossimo = NULL;
-    }
+    punt -> prossimo = NULL;
 
-    informazioni *p = puntatore;
-
-    while (p->prossimo != NULL){
-        cout << "Numero: " << p-> numero << "\nNome: " << p->nome << endl;
-        p = p->prossimo;
+    while (app -> prossimo != NULL){
+        cout << "Elemento stampato: " << app -> numero << endl;
+        app = app -> prossimo;
     }
 
     return 0;
