@@ -1,0 +1,5 @@
+Per compilare un programma in C da shell bisogna usare il comando
+gcc 'nomefile.c', una volta eseguito questo comando verrà creato
+un file chiamato 'a.out' che è un eseguibile (questo se non ci 
+sono errori durante la compilazione).
+Per eseguire il file basta semplicemente usare il comando ./a.out
