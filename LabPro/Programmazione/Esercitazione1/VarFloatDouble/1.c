@@ -10,7 +10,7 @@ int main(){
 	scanf("%f", &altezza);
 
 	perimetro = (base * 2) + (altezza * 2);
-	area = (base * altezza) / 2;
+	area = base * altezza;
 
 	printf("Perimetro: %f, Area: %f\n", perimetro, area);
 	return 0;
