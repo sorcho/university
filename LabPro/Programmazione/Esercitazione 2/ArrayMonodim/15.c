@@ -1,12 +1,12 @@
 #include <stdio.h>
 #define MAX 20
 
+
 int main(){
 	int n;
 
-	// Caricamento dell'array
 	do{
-		printf("Inserisci la dimensione dell'array: ");
+		printf("Inserisci la dimensione: ");
 		scanf("%d", &n);
 	}while(n > MAX);
 
@@ -20,6 +20,7 @@ int main(){
 			b[i] = 1;
 		else
 			b[i] = 2;
+
 	}
 
 	for(int i = 0; i < n; i++)
