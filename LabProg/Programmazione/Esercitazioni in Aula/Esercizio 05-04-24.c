@@ -1,3 +1,5 @@
+// Data una matrice controllare se almeno una riga ha tutti valori uguali
+
 #include <stdio.h>
 #define MAX 20
 
