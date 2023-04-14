@@ -14635,19 +14635,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Matrici-&amp;-vettori">Matrici &amp; vettori<a class="anchor-link" href="#Matrici-&amp;-vettori">&#182;</a></h3><ol start="0">
+<h3 id="Matrici-&amp;-vettori">Matrici &amp; Vettori<a class="anchor-link" href="#Matrici-&amp;-vettori">&#182;</a></h3><ol start="1">
 <li>Data una matrice quadrata, scrivere le seguenti funzioni:</li>
-</ol>
 <ul>
 <li><em>exists_row_same_elements(...)</em>: restituisce 1 se esiste almeno una riga nella matrice avente tutti gli elementi uguali, 0 altrimenti;</li>
 <li><em>exists_col_same_elements(...)</em>: restituisce 1 se esiste almeno una colonna nella matrice avente tutti gli elementi uguali, 0 altrimenti;</li>
-<li><em>exists_diag_same_elements(...)</em>: restituisce 1 se esiste la diagonale principale o la secondaria ha tutti elementi uguali, 0 altrimenti;</li>
-<li><em>esists_something_same_elements(...)</em>: restituisce 1 se esiste una riga, o una colonna, o la diagonale principale, o la diagonale secondaria con tutti gli elementi uguali. Si possono sfruttare le funzioni definite nei punti precedenti.</li>
+<li><em>exists_diag_same_elements(...)</em>: restituisce 1 se la diagonale principale o quella secondaria hanno tutti elementi uguali, 0 altrimenti;</li>
+<li><em>exists_something_same_elements(...)</em>: restituisce 1 se esiste una riga, o una colonna, o la diagonale principale, o la diagonale secondaria con tutti gli elementi uguali. Si possono sfruttare le funzioni definite nei punti precedenti.</li>
 </ul>
-<ol>
 <li>Dati due insiemi A e B, si definisce <em>prodotto cartesiano</em> l'insieme delle coppie ordinate $A \times B = \{(a,b) | a \in A \land b \in B\}$.</li>
-</ol>
-<p>rappresentando i due insiemi $A$ e $B$ attraverso due array, implementare una funzione che restituisca il prodotto cartesiano $A \times B$ all'interno di una matrice, i.e. ogni riga rappresenta un elemento del prodotto cartesiano.
+<p>Rappresentando i due insiemi $A$ e $B$ attraverso due array, implementare una funzione che restituisca il prodotto cartesiano $A \times B$ all'interno di una matrice, i.e. ogni riga rappresenta un elemento del prodotto cartesiano.
 Esempio:
 $$A = (1,2,3),\  B = (4,5,6) \Rightarrow A\times B = \begin{pmatrix}
 1,\ 4\\
@@ -14660,9 +14657,7 @@ $$A = (1,2,3),\  B = (4,5,6) \Rightarrow A\times B = \begin{pmatrix}
 3,\ 5\\
 3,\ 6\\
 \end{pmatrix}$$</p>
-<ol start="2">
 <li>Si generalizzi l'operazione precedente al caso in cui gli insiemi $A$ e $B$ siano rappresentati da due matrici in cui ogni riga corrisponde ad un elemento dell'insieme rappresentato. Esempio:</li>
-</ol>
 $$A = 
 \begin{pmatrix}
 1,\ 2\\
@@ -14678,7 +14673,7 @@ A \times B = \begin{pmatrix}
 3,\ 4,\ 5,\ 6\\
 3,\ 4,\ 7,\ 8\\
 \end{pmatrix}
-$$<ol start="3">
+$$
 <li>Scrivere una funzione che, data una matrice in input, ne restituisca la sua trasposta in una matrice di output. Si ricorda che, data una matrice $M$, la sua trasposta $M^T$ è una matrice tale che $$M_{i,j} = M^T_{j,i}, \ \forall_{i,j}$$</li>
 </ol>
 
