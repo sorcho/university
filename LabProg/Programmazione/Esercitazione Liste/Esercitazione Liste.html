@@ -36,6 +36,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14464,10 +14465,6 @@ a.anchor-link {
   display: none;
 }
 
-.highlight  {
-  margin: 0.4em;
-}
-
 /* Input area styling */
 .jp-InputArea {
   overflow: hidden;
@@ -14477,9 +14474,26 @@ a.anchor-link {
   overflow: hidden;
 }
 
-.CodeMirror pre {
+.CodeMirror.cm-s-jupyter .highlight pre {
+/* weird, but --jp-code-padding defined to be 5px but 4px horizontal padding is hardcoded for pre.CodeMirror-line */
+  padding: var(--jp-code-padding) 4px;
   margin: 0;
-  padding: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+}
+
+.jp-OutputArea-output pre {
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.jp-RenderedText pre {
+  color: var(--jp-content-font-color1);
+  font-size: var(--jp-code-font-size);
 }
 
 /* Using table instead of flexbox so that we can use break-inside property */
@@ -14559,12 +14573,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14579,7 +14593,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="--Laboratorio-di-Programmazione-Gr.-3-(N-Z)-"><center>  Laboratorio di Programmazione Gr. 3 (N-Z) </center><a class="anchor-link" href="#--Laboratorio-di-Programmazione-Gr.-3-(N-Z)-">&#182;</a></h1><h1 id="--Corso-di-Laurea-in-Informatica-"><center>  Corso di Laurea in Informatica </center><a class="anchor-link" href="#--Corso-di-Laurea-in-Informatica-">&#182;</a></h1><h2 id="-Universit%C3%A0-degli-Studi-di-Napoli-Federico-II-"><center> Universit&#224; degli Studi di Napoli Federico II </center><a class="anchor-link" href="#-Universit%C3%A0-degli-Studi-di-Napoli-Federico-II-">&#182;</a></h2><h2 id="-A.A.-2021/22"><center> A.A. 2021/22</center><a class="anchor-link" href="#-A.A.-2021/22">&#182;</a></h2><h4 id="-A.-Apicella-"><center> A. Apicella </center><a class="anchor-link" href="#-A.-Apicella-">&#182;</a></h4>
+<h1 id="--Laboratorio-di-Programmazione-Gr.-3-(N-Z)-"><center>  Laboratorio di Programmazione Gr. 3 (N-Z) </center><a class="anchor-link" href="#--Laboratorio-di-Programmazione-Gr.-3-(N-Z)-">&#182;</a></h1><h1 id="--Corso-di-Laurea-in-Informatica-"><center>  Corso di Laurea in Informatica </center><a class="anchor-link" href="#--Corso-di-Laurea-in-Informatica-">&#182;</a></h1><h2 id="-Universit%C3%A0-degli-Studi-di-Napoli-Federico-II-"><center> Universit&#224; degli Studi di Napoli Federico II </center><a class="anchor-link" href="#-Universit%C3%A0-degli-Studi-di-Napoli-Federico-II-">&#182;</a></h2><h2 id="-A.A.-2022/23"><center> A.A. 2022/23</center><a class="anchor-link" href="#-A.A.-2022/23">&#182;</a></h2><h4 id="-A.-Apicella-"><center> A. Apicella </center><a class="anchor-link" href="#-A.-Apicella-">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14591,13 +14605,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>Implementare le seguenti funzioni per una lista concatenata di interi:</li>
-<li><code>remove_at(...)</code>: data in input una lista concatenata ed un indice di posizione <code>idx</code>, rimuovere dalla lista l'elemento in posizione <code>idx</code>. Si consideri il primo elemento avente posizione <code>0</code>. Tale funzione dovrà restituire:<ul>
+<li><p>Implementare le seguenti funzioni per una lista concatenata di interi:</p>
+</li>
+<li><p><code>remove_at(...)</code>: data in input una lista concatenata ed un indice di posizione <code>idx</code>, rimuovere dalla lista l'elemento in posizione <code>idx</code>. Si consideri il primo elemento avente posizione <code>0</code>. Tale funzione dovrà restituire:</p>
+<ul>
 <li><code>NULL</code>, se l'elemento in posizione <code>idx</code> non esiste</li>
 <li>l'indirizzo dell'elemento rimosso dalla lista</li>
 </ul>
 </li>
-<li><code>insert_at(...)</code>: data in input una lista concatenata, un valore <code>val</code> ed un indice di posizione <code>idx</code>, inserisce l'elemento <code>val</code> in posizione <code>idx</code>. Si consideri il primo elemento avente posizione <code>0</code>. Se <code>idx</code> va oltre la lunghezza effettiva della lista, l'elemento dovrà essere inserito alla fine della lista</li>
+<li><p><code>insert_at(...)</code>: data in input una lista concatenata, un valore <code>val</code> ed un indice di posizione <code>idx</code>, inserisce l'elemento <code>val</code> in posizione <code>idx</code>. Si consideri il primo elemento avente posizione <code>0</code>. Se <code>idx</code> va oltre la lunghezza effettiva della lista, l'elemento dovrà essere inserito alla fine della lista</p>
+</li>
+<li><p>implementare una funzione <code>insert_sorted(...)</code> che, data in input una lista di interi ordinata in maniera crescente ed un valore <code>val</code>, inserisca <code>val</code> in lista in modo che la lista risultante sia ancora ordinata.</p>
+</li>
 </ul>
 
 </div>
@@ -14610,37 +14629,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Implementare una struttura dati con politica di accesso Coda con relative funzioni di accesso utilizzando come struttura una lista concatenata. </li>
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Implementare una struttura dati con politica di accesso Pila con relative funzioni di accesso utilizzando come struttura una lista concatenata. </li>
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>implementare una funzione <code>insert_sorted(...)</code> che, data in input una lista di interi ordinata in maniera crescente ed un valore <code>val</code>, inserisca <code>val</code> in lista in modo che la lista risultante sia ancora ordinata.</li>
-</ul>
 
 </div>
 </div>
@@ -14653,7 +14641,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-text/x-csrc"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>

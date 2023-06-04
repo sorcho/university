@@ -10,7 +10,6 @@ void insert(lista** start, int* n);
 void stampa(lista** start);
 void remove_at(lista** start, int* n);
 void insert_at(lista** start, int* n);
-void sort_list(lista** start, int* n);
 
 int main(){
 	lista* head = NULL;
@@ -29,9 +28,11 @@ int main(){
 void insert(lista** start, int* n){
 	lista* nuovo = malloc(sizeof(lista));
 	*start = nuovo;
+	lista* temp = (*start);
+	lista* precedente = NULL;
 	char risposta;
 	
-	do{
+	/*do{
 		printf("Inserisci il valore: ");
 		scanf("%d", &nuovo -> n);
 		
@@ -47,7 +48,15 @@ void insert(lista** start, int* n){
 		}
 	}while(risposta == 's');
 	
-	nuovo -> prossimo = NULL;
+	nuovo -> prossimo = NULL;*/
+	
+	while(nuovo -> n < temp -> n && temp != NULL){
+		precedente = temp;
+		temp = temp -> prossimo;
+	}
+	
+	precedente -> prossimo = nuovo;
+	nuovo -> prossimo = temp;
 }
 
 void stampa(lista** start){
@@ -115,20 +124,4 @@ void insert_at(lista** start, int* n){
 	punt -> prossimo = NULL;
 	*n += 1;
 }
-
-void sort_list(lista** start, int* n){
-	lista* head = (*start);
-	lista* punt = head -> prossimo;
-	int app;
-	
-	while(punt != NULL){
-		if(head -> n > punt -> n){
-			app = head -> n;
-			head -> n = punt -> n;
-			punt -> n = app;
-		}
-		
-		head = punt;
-		punt = punt -> prossimo;
-	}
-}
+ 
