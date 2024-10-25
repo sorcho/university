@@ -1,4 +1,0 @@
-Scrivere una funzione in C che prese due liste doppiamente puntate e non circolari (L1 e L2) di numeri interi positivi in input caricate da tastiera, faccia le seguenti operazioni tramite ricorsione:
-- Stampare le liste
-- Ordinare L1 in senso crescente
-- Rimuovere da L1 i numeri dispari e si spostino in testa ad L2
