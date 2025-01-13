@@ -1,1 +1,0 @@
-grep -i 'lso\|esame' file-b.txt && grep 'BSD\|ASD' file-b.txt

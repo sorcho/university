@@ -1,0 +1,33 @@
+Personas 1:
+Nome:
+Bianca Neri
+
+Descrizione:
+Bianca Neri ha 36 anni ed è un'agente immobiliare con 10 anni di esperienza nel settore. Vive in una grande città ed è appassionata del suo lavoro, sempre attenta ai dettagli e concentrata sul fornire un servizio eccellente ai suoi clienti. Bianca è socievole, dinamica e molto organizzata. Ama utilizzare strumenti digitali per semplificare il suo lavoro e aumentare la produttività.
+
+Obiettivi:
+Facilità d'uso: Bianca vuole un'app intuitiva che le permetta di caricare annunci in pochi minuti, gestire facilmente le richieste dei clienti e monitorare lo stato delle transazioni.
+Gestione efficace degli annunci: Cerca uno strumento che consenta di evidenziare al meglio le proprietà, con immagini di alta qualità, descrizioni dettagliate e filtri avanzati per raggiungere il pubblico giusto.
+Rapporti con i clienti: Vorrebbe uno spazio dedicato alla comunicazione con gli acquirenti o affittuari per rispondere alle domande e gestire le trattative in modo rapido.
+
+Criticità:
+Affidabilità dell'app: Bianca non tollera bug o rallentamenti. Per lei è fondamentale che l'app sia sempre disponibile e performante, anche nelle ore di punta.
+Organizzazione delle informazioni: La mancanza di un sistema chiaro per gestire il flusso di lavoro, come un calendario integrato o promemoria per appuntamenti, renderebbe l'app meno utile.
+Privacy e sicurezza: La protezione dei dati personali di Bianca e dei suoi clienti è imprescindibile; eventuali falle nella sicurezza potrebbero compromettere la fiducia nell'app.
+
+Personas 2:
+Nome:
+Martina de Grigio e Clara Giallo
+
+Descrizione:
+Martina (28 anni) e Clara (27 anni) sono una giovane coppia che vive in città. Entrambe lavorano in ambito creativo: Martina è una graphic designer freelance, mentre Clara lavora in una libreria indipendente. Si spostano principalmente con i mezzi pubblici e sono alla ricerca di una casa da affittare per iniziare la loro vita insieme. Con un budget limitato, sono molto attente a trovare un'abitazione che combini praticità, accessibilità e un costo sostenibile.
+
+Obiettivi:
+Ricerca mirata: Vogliono un’app che consenta loro di filtrare facilmente le opzioni in base al budget, alla posizione e alle esigenze (vicinanza ai mezzi pubblici, dimensione minima, presenza di una cucina attrezzata).
+Accessibilità delle informazioni: Cercano descrizioni chiare e dettagliate, con foto realistiche e mappe che mostrino la posizione precisa degli immobili e i servizi vicini (fermate di autobus, supermercati, ecc.).
+
+Criticità:
+Budget: È fondamentale che l'app non mostri proprietà fuori dal loro range di prezzo; trovarsi continuamente davanti case troppo costose sarebbe frustrante.
+Trasparenza: Vogliono evitare brutte sorprese, come costi nascosti o foto non corrispondenti alla realtà. Le informazioni devono essere accurate e complete.
+Velocità e aggiornamenti: Per loro è cruciale accedere a nuovi annunci in tempo reale, considerando che le case a prezzi accessibili tendono a essere prese molto velocemente.
+Interfaccia intuitiva: Non hanno tempo da perdere con app complicate o che richiedano troppi passaggi per vedere le informazioni essenziali.

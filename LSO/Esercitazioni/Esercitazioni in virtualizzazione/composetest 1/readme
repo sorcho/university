@@ -1,4 +1,0 @@
-Il comando "docker compose up" viene eseguito correttamente ma dal browser,
-sia inserendo "localhost:8000" che "127.0.0.1:8000" viene mostrato l'errore NOT FOUND.
-Andando ad inserire un volume come indicato nell'ultima slide il programma viene
-eseguito correttamente.

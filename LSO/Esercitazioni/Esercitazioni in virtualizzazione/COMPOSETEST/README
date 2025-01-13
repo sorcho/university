@@ -1,2 +1,0 @@
-COMMAND: docker compose up
-ERRORE: yaml: line 2: found character that cannot start any token
