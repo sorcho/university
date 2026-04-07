@@ -1,0 +1,23 @@
+main {
+    width: 65%;
+}
+
+section.main {
+    display: inline-block;
+    width: 30%;
+}
+
+aside {
+    display: inline-block;
+    width: 240px;
+}
+
+img {
+    width: 200px;
+}
+
+nav {
+    align-content: center;
+    height: 50px;
+    background-color: cyan;
+}

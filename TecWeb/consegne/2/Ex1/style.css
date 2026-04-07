@@ -1,0 +1,47 @@
+header {
+    background: blue;
+    color: white
+}
+
+nav {
+    background-color: lightgrey;
+}
+
+nav span:not(:first-child)::before{
+    content: "- ";
+}
+
+span.master {
+    color: blue;
+    font-weight: bold;
+}
+
+span ~ em {
+    font-weight: bold;
+    color: red;
+}
+
+[href$=".it"]::before {
+    content: "\2192";
+}
+
+[href$=".it"]::after {
+    content: "(ext.)";
+}
+
+li:nth-child(n) {
+    color:green
+}
+
+li:nth-child(2n) {
+    color:white
+}
+
+li:nth-child(3n) {
+    color:red
+}
+
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+    background: black !important;
+}

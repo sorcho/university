@@ -1,0 +1,17 @@
+section.main {
+    display: inline-block;
+}
+
+aside {
+    display: inline-block;
+}
+
+img {
+    width: 200px;
+}
+
+nav {
+    align-content: center;
+    height: 50px;
+    background-color: cyan;
+}

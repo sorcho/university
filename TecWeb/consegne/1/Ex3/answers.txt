@@ -1,0 +1,10 @@
+• What happens when you submit the form? What is the query string?
+file:///mnt/hdd/university/TecWeb/consegne/1/Ex3/form.html?first-name=Mattia&last-name=Scotellaro&birth-date=2002-07-31&gender=male&password=spillo&biography=bella&color=%23613583
+• If you change the form method to "POST", what happens when you submit the form? Is 
+there a query string? 
+no query string
+• Use the browser’s web tools to inspect the POST request that is sent upon submission of the 
+form. What is the body of the POST request?
+the method is get but there is nothing in the body request
+• What happens, upon submission, if one of the inputs does not have a name attribute? 
+the input field does not register
