@@ -1,6 +1,5 @@
 export class Todo {
-  constructor(id, todo, date){
-    this.id = id;
+  constructor(todo, date){
     this.todo = todo;
     this.creation_date = date;
   }

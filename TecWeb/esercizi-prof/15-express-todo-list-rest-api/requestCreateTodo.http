@@ -1,0 +1,8 @@
+POST http://localhost:3000/todos
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibHVpZ2kiLCJpYXQiOjE3NDY5NDc5MjcsImV4cCI6MTc0NzAzNDMyN30.0mkwhcwxgsUZaH49ogoxUBjz9kOtG2P_9tsaRFc_vAs
+
+{
+  "todo": "Learn TypeScript",
+  "done": false
+}

@@ -17,6 +17,6 @@ block content
 
   .list-group
     each item in todoItems
-      a(class="list-group-item list-group-item-action" id=item.id href="/delete")= item.todo
+      a(class="list-group-item list-group-item-action" href="#")= item.todo 
     else 
       p(class="text-danger") The To-do list is currently empty! Add the first item using the form above.

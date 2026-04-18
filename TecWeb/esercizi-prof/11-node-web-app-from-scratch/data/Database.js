@@ -12,7 +12,6 @@ export class Database {
       //create todos table
       db.run(`
         CREATE TABLE todos ( 
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
           todo TEXT, 
           creation_date TEXT
         )
@@ -53,24 +52,6 @@ export class Database {
           } else {
             resolve(true);
           }
-        }
-      );
-    });
-  }
-
-  deleteTodo(todo) {
-    const db = new sqlite3.Database(DBFILE);
-    return new Promise(function (resolve, reject){
-      db.run(
-        "DELETE FROM todo WHERE id=?",
-        [todo.id],
-        (result, error) => {
-          db.close();
-            if (error){
-              reject("An error occurred");
-            } else {
-              resolve(true);
-            }
         }
       );
     });

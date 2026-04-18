@@ -6,7 +6,6 @@ import { renderHomepage } from './controllers/homepage.js';
 import { handleResetRequest } from './controllers/reset.js';
 import { handleError } from './utils.js';
 import { handleTodoListRequest } from './controllers/todo.js';
-import { handleDeleteRequest } from './controllers/delete.js';
 
 const PORT = 3000;
 
@@ -30,9 +29,6 @@ function handleRequest(request, response){
       break;
     case "/todo":
       handleTodoListRequest(request, response);  
-      break;
-    case "/delete":
-      handleDeleteRequest(request, response);
       break;
     /* serve static files */
     case "/css/bootstrap.css":
